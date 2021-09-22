@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -10,7 +10,7 @@ else{
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#C3CED2;">
+<body style="background-color:#757374;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
@@ -30,7 +30,7 @@ else{
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'>INFORMATION</a></li>
+            <li> <a href='contacts.php'> CONTACTS</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
@@ -39,9 +39,11 @@ else{
 
 <div class="bg"></div>
 <p></p>
-<p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+<p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
     Welcome to the WGC Canteen, above are the links to any information you would like to find out about our canteen
 </p>
+
+
 
 <style>
     h1 {text-align: center;}
@@ -58,7 +60,7 @@ else{
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #0992B2;
+        background-color: #333;
     }
 
     li {

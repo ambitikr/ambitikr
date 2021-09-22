@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_cafe2021");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -11,16 +11,17 @@ if(isset($_GET['specials'])){
 }else{
     $id = 1;
 }
-
 $this_specials_query = "SELECT specials.SpecID, specials.Days, savoryitems.SavoryName, savoryitems.Stock, savoryitems.Cost, sweets.SweetName, sweets.Stock, sweets.Cost 
 FROM specials, savoryitems, sweets 
 WHERE specials.SavoryID = savoryitems.SavoryID 
-AND specials.SweetID = sweets.SweetID = '"   . $id . "'";
+AND specials.SweetID = sweets.SweetID 
+AND specials.SpecID 
+ORDER BY `specials`.`SpecID` ASC  = '"   .$id['specials']  . "'";
 $this_specials_result = mysqli_query($con, $this_specials_query);
 $this_specials_record = mysqli_fetch_assoc($this_specials_result);
 
 /* Specials Query from Index page*/
-$all_specials_query = "SELECT Days FROM specials ORDER BY SpecID ASC";
+$all_specials_query = "SELECT SpecID FROM specials ORDER BY SpecID ASC";
 $all_specials_result = mysqli_query($con, $all_specials_query);
 ?>
 
@@ -29,16 +30,14 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 <html lang="en">
 <body style="background-color:#757374;">
 <head>
-    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
-        WGC CANTEEN</p>
+    <title> COFFEE SHOP</title>
     <meta charset="utf-8"
     <link rel='stylesheet' type='text/css' href = 'style.css'
 </head>
 
 <body>
 <header>
-    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">
-        SPECIALS</p>
+    <h1> SPECIALS</h1>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
@@ -49,20 +48,20 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'>INFORMATION</a></li>
+            <li> <a href='contacts.php'> CONTACTS</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
 
     <div class="bg"></div>
     <p></p>
-    <p style = "font-family:georgia,garamond,serif;font-size:40px;font-style:italic;color: #C3CED2;">
-        75% off on all mentioned items!</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
 
     <?php
     echo "<p> Day: " . $this_specials_record['Days'] . "<br>";
     echo "<p> Sweet Item: " . $this_specials_record['SweetName'] . "<br>";
-    echo "<p> Stock: " . $this_specials_record['SavoryName'] . "<br>";
+    echo "<p> Stock: " . $this_specials_record['Stock'] . "<br>";
+    echo "<p> Cost: " . $this_specials_record['Cost'] . "<br>";
     ?>
 
     <h2>Specials Information</h2>
@@ -83,6 +82,10 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 </header>
 
 
+    /* SELECT specials.SpecID, specials.Days, savoryitems.SavoryName, savoryitems.Stock, savoryitems.Cost, sweets.SweetName, sweets.Stock, sweets.Cost
+    FROM specials, savoryitems, sweets
+    WHERE specials.SavoryID = savoryitems.SavoryID
+    AND specials.SweetID = sweets.SweetID AND specials.SpecID*/
 
 <style>
     h1 {text-align: center;}

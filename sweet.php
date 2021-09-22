@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -36,7 +36,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             <li> <a href='drinks.php'> DRINKS MENU</a></li>
             <li> <a href='savoury.php'> SAVOURY ITEMS</a></li>
             <li> <a href='sweet.php'> SWEET ITEMS</a></li>
-            <li> <a href='contacts.php'>INFORMATION</a></li>
+            <li> <a href='contacts.php'> CONTACTS</a></li>
         </ul>
     </nav>
 </header>
