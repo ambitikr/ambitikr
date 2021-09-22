@@ -4,20 +4,24 @@ if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
     echo "connected to database";
+    echo PHP_VERSION;
 }
 
-if(isset($_GET['specials'])){
+/*if(isset($_GET['specials'])){
     $id = $_GET['specials'];
 }else{
     $id = 1;
-}
+}*/
 $this_specials_query = "SELECT specials.SpecID, specials.Days, savoryitems.SavoryName, savoryitems.Stock, savoryitems.Cost, sweets.SweetName, sweets.Stock, sweets.Cost 
 FROM specials, savoryitems, sweets 
 WHERE specials.SavoryID = savoryitems.SavoryID 
-AND specials.SweetID = sweets.SweetID 
-AND specials.SpecID 
-ORDER BY `specials`.`SpecID` ASC  = '"   .$id['specials']  . "'";
+AND specials.SweetID = sweets.SweetID ";
 $this_specials_result = mysqli_query($con, $this_specials_query);
+while ($row = mysqli_fetch_assoc($this_specials_result))
+{
+    echo $row['SpecID'];
+}
+
 $this_specials_record = mysqli_fetch_assoc($this_specials_result);
 
 /* Specials Query from Index page*/
@@ -30,14 +34,16 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 <html lang="en">
 <body style="background-color:#757374;">
 <head>
-    <title> COFFEE SHOP</title>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
+        WGC CANTEEN</p>
     <meta charset="utf-8"
     <link rel='stylesheet' type='text/css' href = 'style.css'
 </head>
 
 <body>
 <header>
-    <h1> SPECIALS</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">
+        SPECIALS</p>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
@@ -48,14 +54,15 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'> CONTACTS</a></li>
+            <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
 
     <div class="bg"></div>
     <p></p>
-    <p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+    <p style = "font-family:georgia,garamond,serif;font-size:40px;font-style:italic;color: #C3CED2;">
+        75% off on all mentioned items!</p>
 
     <?php
     echo "<p> Day: " . $this_specials_record['Days'] . "<br>";

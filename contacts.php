@@ -12,14 +12,16 @@ else{
 <html lang="en">
 <body style="background-color:#757374;">
 <head>
-    <title> COFFEE SHOP</title>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
+        WELLINGTON GIRLS COLLEGE CANTEEN</p>
     <meta charset="utf-8"
     <link rel='stylesheet' type='text/css' href = 'style.css'
 </head>
 
 <body>
 <header>
-    <h1> WELLINGTON GIRLS COLLEGE CANTEEN</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">
+        INFORMATION</p>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
@@ -30,7 +32,7 @@ else{
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'> CONTACTS</a></li>
+            <li> <a href='contacts.php'> INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
@@ -38,18 +40,112 @@ else{
 
 <div class="bg"></div>
 
-<p></p>
-<p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:ifont-family:georgia,garamond,serif;font-size:16px;font-style:italic">
-    Open Days ------------------Time
-    <div> Mon------------------10:30-11:10 & 12:45-1:35 </div>
 
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<body>
+<p></p>
+<p style = "font-family:georgia,garamond,serif;font-size:25px;">
+Open Timings
+</p>
+<center>
+<table style="width:50%">
+    <tr>
+        <th>Days</th>
+        <th>Open Timings - Interval</th>
+        <th>Lunch</th>
+    </tr>
+    <tr>
+        <td>Monday</td>
+        <td>10:30-11:10am</td>
+        <td>12:45-1:35pm</td>
+    </tr>
+    <tr>
+        <td>Tuesday</td>
+        <td>10:30-11:10am</td>
+        <td>12:45-1:35pm</td>
+
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        <td>11-11:20am</td>
+        <td>12:55-1:45pm</td>
+
+    </tr>
+    <tr>
+        <td>Thursday</td>
+        <td>10:30-11:10am</td>
+        <td>12:45-1:35pm</td>
+
+    </tr>
+    <tr>
+        <td>Friday</td>
+        <td>10:20-11:10am</td>
+        <td>12:45-1:35pm</td>
+
+    </tr>
+</table>
+</center>
 </p>
 
+<p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+    CONTACTS</p>
+<p></p>
+<p
+<div>Email: wgccanteen@wgc.school.nz</div>
+<div>Phone Number: 0123456789 9999</div>
+</p>
+
+<!-- Add font awesome icons -->
+<center>
+<a href="https://www.facebook.com/WellingtonGirlsCollegeNZ/" class="fa fa-facebook"></a>
+<a href="https://wgc.school.nz/" class="fa fa-google"></a>
+<a href="https://www.instagram.com/wgcteamteal/?hl=en" class="fa fa-instagram"></a>
+</center>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-google {
+        background: #0992B2;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #C3CED2;
+        color: white;
+    }
+
+</style>
 
 <style>
     h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3 {text-align: center;}
     p {text-align: center;}
     div {text-align: center;}
+    form {text-align: center;}
 </style>
 
 <style>

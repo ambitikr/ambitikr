@@ -12,7 +12,7 @@ if(isset($_GET['drink'])){
 }
 
 /* Drinks Query-  $this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '" .  $id  . "'";*/
-$this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '"   .$id['drink']  . "'";
+$this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '"   .$_GET['drink']  . "'";
 $this_drinks_result = mysqli_query($con, $this_drink_query);
 $this_drink_record = mysqli_fetch_assoc($this_drinks_result);
 
@@ -20,6 +20,7 @@ $this_drink_record = mysqli_fetch_assoc($this_drinks_result);
 $all_drinks_query = "SELECT DrinkID, DrinkN FROM drinks";
 $all_drinks_result = mysqli_query($con, $all_drinks_query);
 ?>
+
 
 <!DOCTYPE html>
 
@@ -45,7 +46,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                         <a href='savoury.php'>SAVOURY ITEMS</a>
                         <a href='sweet.php'>SWEET ITEMS</a>
                     </div>
-                <li> <a href='contacts.php'> CONTACTS</a></li>
+                <li> <a href='contacts.php'> INFORMATION</a></li>
                 <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
             </ul>
         </ul>
@@ -53,9 +54,15 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
 </header>
 </body>
 <main>
-<h2>Drink Information</h2>
     <div class="bg"></div>
-    
+<h2>Drink Information</h2>
+
+    <?php
+    echo "<p> Drink Name: " . $this_drink_record['DrinkN'] . "<br>";
+    echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
+    echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
+    ?>
+
 
     <h3>Other Drinks</h3>
     <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php'>
@@ -71,11 +78,6 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
         <input type='submit' name='drinks_button' value='Show me the drink information'>
     </form>
 
-    <?php
-    echo "<p> Drink Name: " . $this_drink_record['DrinkN'] . "<br>";
-    echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
-    echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
-    ?>
 
     <style>
         h1 {text-align: center;}

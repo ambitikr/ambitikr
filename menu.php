@@ -43,7 +43,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'> CONTACTS</a></li>
+            <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>

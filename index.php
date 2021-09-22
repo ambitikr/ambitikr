@@ -30,7 +30,7 @@ else{
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'> CONTACTS</a></li>
+            <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
@@ -39,11 +39,9 @@ else{
 
 <div class="bg"></div>
 <p></p>
-<p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+<p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
     Welcome to the WGC Canteen, above are the links to any information you would like to find out about our canteen
 </p>
-
-
 
 <style>
     h1 {text-align: center;}

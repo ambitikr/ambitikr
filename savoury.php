@@ -11,7 +11,7 @@ if(isset($_GET['savory'])){
     $id = 1;
 }
 /* Drinks Query-  $this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '" .  $id  . "'";*/
-$this_savory_query = "SELECT SavoryName, Stock, Cost  FROM savoryitems WHERE SavoryID = '"   .$id['savory']  . "'";
+$this_savory_query = "SELECT SavoryName, Stock, Cost  FROM savoryitems WHERE SavoryID = '"   .$_GET['savory']  . "'";
 $this_savory_result = mysqli_query($con, $this_savory_query);
 $this_savory_record = mysqli_fetch_assoc($this_savory_result);
 
@@ -43,7 +43,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                     <a href='savoury.php'>SAVOURY ITEMS</a>
                     <a href='sweet.php'>SWEET ITEMS</a>
                 </div>
-            <li> <a href='contacts.php'> CONTACTS</a></li>
+            <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
