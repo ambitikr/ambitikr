@@ -27,7 +27,7 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
         WGC CANTEEN</p>

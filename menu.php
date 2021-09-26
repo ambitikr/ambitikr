@@ -100,9 +100,329 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             <input type='submit' name='savory_button' value='Show me the order information'>
     </form>
 
+/*style code for table on menu and contacts/info page */
+    <style>
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+    <body>
 
 <P></P>
     <p></p>
+    <p style = "font-family:georgia,garamond,serif;font-size:25px;">
+        Menu
+    </p>
+    <center>
+        <table style="width:50%">
+            <tr>
+                <th>Vegan Options</th>
+                <th>Gluten Free Options</th>
+                <th>Drink Items</th>
+                <th>Savory Items</th>
+                <th>Sweet Items</th>
+            </tr>
+            <tr>
+                <td>
+                    <div>Item: Oreo Chocolate Sandwich Cookies</div>
+                    <div>Price: $5.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Gluten Free Pasta</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock:</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Chocolate Milk</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Sea Salt chips</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock:Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Snickers</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+            </tr>
+            <tr>
+                <td><div>Item: Pringles Original Potato Crisps</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Gluten Free Raspberry Slice</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Coke</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Heartland Salt & Vinegar chips</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Lamingtons</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Ritz Original Crackers</div>
+                    <div>Price: $2.50</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Gluten Free Lemon Slice</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Fanta</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Heartland Salt chips </div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Raspberry Slice</div>
+                    <div>Price: Y</div>
+                    <div>Stock: $4.00</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Doritos Spicy Sweet Chilli</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Harvest Snaps Salt&Vinegar</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Long Black</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Crackers</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Caramel Slice</div>
+                    <div>Price: Y</div>
+                    <div>Stock: $4.00</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Proper Crisps</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td><div>Item: Harvest Snaps Salt</div>
+                    <div>Price:</div>
+                    <div>Stock:</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Flat White</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: 2 Minute Noodles</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Fudge</div>
+                    <div>Price: $5.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Fruit Nuggets</div>
+                    <div>Price: $0.50</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Harvest Snaps Chilli</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: L&P</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Sandwich(Veg)</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Lemon Slice</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Potato Stix</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Serious Popcorn</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Orange Juice</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Popcorn</div>
+                    <div>Price: $5.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Oreo Cookies</div>
+                    <div>Price: $5.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: Copper Kettle Sea Salt</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Keto Berry Cream Wafer</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Sprite</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Fries</div>
+                    <div>Price: $7.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Chocolate Cupcake</div>
+                    <div>Price: $6.00</div>
+                    <div>Stock: N</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div>Item: The Natural Fruit Jellies</div>
+                    <div>Price: $4.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Keto Choc Hazelnut Wafer</div>
+                    <div>Price:</div>
+                    <div>Stock:</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td><div>Item: Water</div>
+                    <div>Price: $2.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div></td>
+                <td>
+                    <div>Item: Organic Seaweed Snack</div>
+                    <div>Price: $3.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+                <td>
+                    <div>Item: Magnum Almond Ice Cream</div>
+                    <div>Price: $7.00</div>
+                    <div>Stock: Y</div>
+                    <div>Calories:</div>
+                    <div>Ingredients:</div>
+                </td>
+
+            </tr>
+        </table>
+    </center>
+    </p>
+
 
 
 

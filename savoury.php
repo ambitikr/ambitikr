@@ -11,7 +11,7 @@ if(isset($_GET['savory'])){
     $id = 1;
 }
 /* Drinks Query-  $this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '" .  $id  . "'";*/
-$this_savory_query = "SELECT SavoryName, Stock, Cost  FROM savoryitems WHERE SavoryID = '"   .$_GET['savory']  . "'";
+$this_savory_query = "SELECT SavoryName, Stock, Cost  FROM savoryitems WHERE SavoryID = '"   .  $id  . "'";
 $this_savory_result = mysqli_query($con, $this_savory_query);
 $this_savory_record = mysqli_fetch_assoc($this_savory_result);
 
@@ -51,6 +51,35 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 </body>
 <main>
     <div class="bg"></div>
+    <h2>Search a Drink</h2>
+
+    <form action="" method="post">
+        <input type="text" name='search'>
+        <input type="submit" name="submit" value="Search">
+    </form>
+
+    <?php
+    if(isset($_POST['search'])) {
+        $search = $_POST['search'];
+
+        $query1 = "SELECT SavoryName, Cost, Stock FROM savoryitems WHERE SavoryName LIKE '%$search%'";
+        $query = mysqli_query($con, $query1);
+        $count = mysqli_num_rows($query);
+
+        if($count == 0){
+            echo "There was no search results!";
+        }else{
+            while($row = mysqli_fetch_array($query)) {
+                echo $row ['SavoryName'];
+                echo ": $";
+                echo $row ['Cost'];
+                echo " ---- Availability:";
+                echo $row ['Stock'];
+                echo"<br>";
+            }
+        }
+    }
+    ?>
     <h2>Savory Item Information</h2>
 
     <?php

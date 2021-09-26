@@ -133,7 +133,7 @@ Open Timings
     }
 
     .fa-instagram {
-        background: #C3CED2;
+        background: #C3CED5;
         color: white;
     }
 

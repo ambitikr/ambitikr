@@ -58,7 +58,7 @@ else{
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #0992B2;
+        background-color: #333;
     }
 
     li {

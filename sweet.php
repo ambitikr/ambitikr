@@ -6,8 +6,14 @@ else{
     echo "connected to database";
 }
 
+if(isset($_GET['savory'])){
+    $id = $_GET['savory'];
+}else{
+    $id = 1;
+}
+
 /* Sweets Query*/
-$this_sweet_query = "SELECT SweetName, Stock, Cost  FROM sweets WHERE SweetID  = '"   .$_GET['sweet']  . "'";
+$this_sweet_query = "SELECT SweetName, Stock, Cost  FROM sweets WHERE SweetID  = '"   .  $id  . "'";
 $this_sweet_result = mysqli_query($con, $this_sweet_query);
 $this_sweet_record = mysqli_fetch_assoc($this_sweet_result);
 
@@ -42,6 +48,36 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 </header>
 </body>
 <main>
+        <div class="bg"></div>
+        <h2>Search a Drink</h2>
+
+        <form action="" method="post">
+            <input type="text" name='search'>
+            <input type="submit" name="submit" value="Search">
+        </form>
+
+        <?php
+        if(isset($_POST['search'])) {
+            $search = $_POST['search'];
+
+            $query1 = "SELECT SweetName, Cost, Stock FROM sweets WHERE SweetName LIKE '%$search%'";
+            $query = mysqli_query($con, $query1);
+            $count = mysqli_num_rows($query);
+
+            if($count == 0){
+                echo "There was no search results!";
+            }else{
+                while($row = mysqli_fetch_array($query)) {
+                    echo $row ['SweetName'];
+                    echo ": $";
+                    echo $row ['Cost'];
+                    echo " ---- Availability:";
+                    echo $row ['Stock'];
+                    echo"<br>";
+                }
+            }
+        }
+        ?>
     <h2>Sweet Item Information</h2>
 
     <?php
@@ -65,4 +101,90 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             <input type='submit' name='savory_button' value='Show me the order information'>
     </form>
 
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        form {text-align: center;}
+    </style>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #0992B2;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #C3CED2;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+    </style>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Wellington_Girls_College_sign.jpg/1200px-Wellington_Girls_College_sign.jpg");
+
+            /* Full height */
+            height: 50%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </main>
