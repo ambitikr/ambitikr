@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -12,12 +12,12 @@ if(isset($_GET['drink'])){
 }
 
 /* Drinks Query-  $this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '" .  $id  . "'";*/
-$this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '"   .$_GET['drink']  . "'";
+$this_drink_query = "SELECT DrinkName, Available, Cost  FROM drinks WHERE DrinkID = '"   .$_GET['drink']  . "'";
 $this_drinks_result = mysqli_query($con, $this_drink_query);
 $this_drink_record = mysqli_fetch_assoc($this_drinks_result);
 
 /* Drinks Query from menu*/
-$all_drinks_query = "SELECT DrinkID, DrinkN FROM drinks";
+$all_drinks_query = "SELECT DrinkID, DrinkName FROM drinks";
 $all_drinks_result = mysqli_query($con, $all_drinks_query);
 ?>
 
@@ -58,7 +58,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
 <h2>Drink Information</h2>
 
     <?php
-    echo "<p> Drink Name: " . $this_drink_record['DrinkN'] . "<br>";
+    echo "<p> Drink Name: " . $this_drink_record['DrinkName'] . "<br>";
     echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
     echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
     ?>
@@ -70,7 +70,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
             <?php
             while($all_drinks_record = mysqli_fetch_assoc($all_drinks_result)){
                 echo "<option value = '". $all_drinks_record['DrinkID'] . "'>";
-                echo $all_drinks_record['DrinkN'];
+                echo $all_drinks_record['DrinkName'];
                 echo "</option>";
             }
             ?>

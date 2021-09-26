@@ -1,31 +1,26 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_cafe2021");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
     echo "connected to database";
-    echo PHP_VERSION;
 }
 
-/*if(isset($_GET['specials'])){
+if(isset($_GET['specials'])){
     $id = $_GET['specials'];
 }else{
     $id = 1;
-}*/
+}
+
 $this_specials_query = "SELECT specials.SpecID, specials.Days, savoryitems.SavoryName, savoryitems.Stock, savoryitems.Cost, sweets.SweetName, sweets.Stock, sweets.Cost 
 FROM specials, savoryitems, sweets 
 WHERE specials.SavoryID = savoryitems.SavoryID 
-AND specials.SweetID = sweets.SweetID ";
+AND specials.SweetID = sweets.SweetID AND specials.SpecID = '"   . $id . "'";
 $this_specials_result = mysqli_query($con, $this_specials_query);
-while ($row = mysqli_fetch_assoc($this_specials_result))
-{
-    echo $row['SpecID'];
-}
-
 $this_specials_record = mysqli_fetch_assoc($this_specials_result);
 
 /* Specials Query from Index page*/
-$all_specials_query = "SELECT SpecID FROM specials ORDER BY SpecID ASC";
+$all_specials_query = "SELECT SpecID, Days FROM specials ORDER BY specials.SpecID ASC, specials.Days";
 $all_specials_result = mysqli_query($con, $all_specials_query);
 ?>
 
@@ -67,8 +62,7 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
     <?php
     echo "<p> Day: " . $this_specials_record['Days'] . "<br>";
     echo "<p> Sweet Item: " . $this_specials_record['SweetName'] . "<br>";
-    echo "<p> Stock: " . $this_specials_record['Stock'] . "<br>";
-    echo "<p> Cost: " . $this_specials_record['Cost'] . "<br>";
+    echo "<p> Stock: " . $this_specials_record['SavoryName'] . "<br>";
     ?>
 
     <h2>Specials Information</h2>
@@ -89,10 +83,6 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 </header>
 
 
-    /* SELECT specials.SpecID, specials.Days, savoryitems.SavoryName, savoryitems.Stock, savoryitems.Cost, sweets.SweetName, sweets.Stock, sweets.Cost
-    FROM specials, savoryitems, sweets
-    WHERE specials.SavoryID = savoryitems.SavoryID
-    AND specials.SweetID = sweets.SweetID AND specials.SpecID*/
 
 <style>
     h1 {text-align: center;}

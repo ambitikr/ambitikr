@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -10,7 +10,7 @@ else{
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
         WELLINGTON GIRLS COLLEGE CANTEEN</p>

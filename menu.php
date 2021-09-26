@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -7,7 +7,7 @@ else{
 }
 
 /* Drinks Query*/
-$all_drinks_query = "SELECT DrinkID, DrinkN FROM drinks";
+$all_drinks_query = "SELECT DrinkID, DrinkName FROM drinks";
 $all_drinks_result = mysqli_query($con, $all_drinks_query);
 
 /* Savory Items Query*/
@@ -61,7 +61,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             <?php
             while($all_drinks_record = mysqli_fetch_assoc($all_drinks_result)){
                 echo "<option value = '". $all_drinks_record['DrinkID'] . "'>";
-                echo $all_drinks_record['DrinkN'];
+                echo $all_drinks_record['DrinkName'];
                 echo "</option>";
             }
             ?>

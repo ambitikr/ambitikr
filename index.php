@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_wgc_canteen");
+$con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
@@ -10,7 +10,7 @@ else{
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
@@ -58,7 +58,7 @@ else{
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #333;
+        background-color: #0992B2;
     }
 
     li {
