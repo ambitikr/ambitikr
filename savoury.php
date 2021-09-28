@@ -23,11 +23,11 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#C3CED2;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
-    <link rel='stylesheet' type='text/css' href = 'style.css'
+    <link rel="stylesheet" href = "css/custom-style.css"/>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -105,93 +105,6 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
     echo "<p> Availability: " . $this_savory_record['Stock'] . "<br>";
     echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
     ?>
-
-    <style>
-        h1 {text-align: center;}
-        h2 {text-align: center;}
-        h3 {text-align: center;}
-        p {text-align: center;}
-        div {text-align: center;}
-        form {text-align: center;}
-    </style>
-
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-            border-right: 1px solid #bbb;
-        }
-
-        li a, .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover, .dropdown:hover .dropbtn {
-            background-color: #0992B2;
-        }
-
-        li.dropdown {
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #C3CED2;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {background-color: #f1f1f1;}
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        li:last-child {
-            border-right: none;
-        }
-    </style>
-
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-
-        .bg {
-            /* The image used */
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Wellington_Girls_College_sign.jpg/1200px-Wellington_Girls_College_sign.jpg");
-
-            /* Full height */
-            height: 50%;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 
 </main>
 

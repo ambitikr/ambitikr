@@ -1,0 +1,143 @@
+
+/* all pages background colour*/
+body{
+    background-color:#C3CED2;
+}
+/* all pages align to center*/
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+form {text-align: center;}
+
+/* Connected to all pages- nav bar and picture*/
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+  }
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #0992B2;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #C3CED2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.bg {
+    /* The image used */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Wellington_Girls_College_sign.jpg/1200px-Wellington_Girls_College_sign.jpg");
+
+    /* Full height */
+    height: 50%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* From contacts page - for icons*/
+ .fa {
+     padding: 20px;
+     font-size: 30px;
+     width: 30px;
+     text-align: center;
+     text-decoration: none;
+     margin: 5px 2px;
+     border-radius: 50%;
+ }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-google {
+    background: #0992B2;
+    color: white;
+}
+
+.fa-instagram {
+    background: #333333;
+    color: white;
+}
+
+
+/* Contacts1- map*/
+ .mapouter {
+     position:relative;
+     text-align:right;
+     height:524px;
+     width:589px;
+ }
+
+
+/* Contacts2- map*/
+ .gmap_canvas {
+     overflow:hidden;
+     background:none!important;
+     height:524px;
+     width:589px;}
+ 
+/*style code for table on menu and contacts/info page */
+
+ table, th, td {
+     border:1px solid black;
+ }
+
+ 
