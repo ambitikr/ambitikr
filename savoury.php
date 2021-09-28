@@ -23,7 +23,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
@@ -51,7 +51,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 </body>
 <main>
     <div class="bg"></div>
-    <h2>Search a Drink</h2>
+    <h2>Search a Savoury Item</h2>
 
     <form action="" method="post">
         <input type="text" name='search'>
@@ -80,13 +80,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
         }
     }
     ?>
-    <h2>Savory Item Information</h2>
 
-    <?php
-    echo "<p> Item Name: " . $this_savory_record['SavoryName'] . "<br>";
-    echo "<p> Availability: " . $this_savory_record['Stock'] . "<br>";
-    echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
-    ?>
 
     <h3>Other Savory Items</h3>
 
@@ -103,6 +97,14 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
         </select>
         <input type='submit' name='savory_button' value='Show me the order information'>
     </form>
+
+    <h2>Savory Item Information</h2>
+
+    <?php
+    echo "<p> Item Name: " . $this_savory_record['SavoryName'] . "<br>";
+    echo "<p> Availability: " . $this_savory_record['Stock'] . "<br>";
+    echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
+    ?>
 
     <style>
         h1 {text-align: center;}

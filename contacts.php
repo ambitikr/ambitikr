@@ -3,7 +3,7 @@ $con = mysqli_connect("localhost", "ambitikr", "smallfeet14", "ambitikr_canteen"
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 else{
-    echo "connected to database";
+    echo " ";
 }
 ?>
 
@@ -20,8 +20,8 @@ else{
 
 <body>
 <header>
-    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">
-        INFORMATION</p>
+
+    <h1>INFORMATION</h1>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
@@ -47,10 +47,7 @@ else{
     }
 </style>
 <body>
-<p></p>
-<p style = "font-family:georgia,garamond,serif;font-size:25px;">
-Open Timings
-</p>
+<h2>Open Timings</h2>
 <center>
 <table style="width:50%">
     <tr>
@@ -89,15 +86,9 @@ Open Timings
     </tr>
 </table>
 </center>
-</p>
 
-<p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
-    CONTACTS</p>
-<p></p>
-<p
-<div>Email: wgccanteen@wgc.school.nz</div>
-<div>Phone Number: 0123456789 9999</div>
-</p>
+<p>Email: wgccanteen@wgc.school.nz</p>
+<p>Phone Number: 0123456789 9999</p>
 
 <!-- Add font awesome icons -->
 <center>
@@ -138,6 +129,34 @@ Open Timings
     }
 
 </style>
+<p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
+<h2 style = "text-align: left; font-family:georgia,garamond;">Address: </h2>
+<div class="mapouter">
+    <div class="gmap_canvas">
+        <iframe width="589" height="524" id="gmap_canvas" src="https://maps.google.com/maps?q=Pipitea%20Street,%20Thorndon,%20Wellington%206011&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="5"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0">
+
+        </iframe><a href="https://putlocker-is.org"></a>
+        <br>
+        <style>
+            .mapouter {
+                position:relative;
+                text-align:right;
+                height:524px;
+                width:589px;
+            }
+        </style><a href="https://www.embedgooglemap.net"></a>
+        <style>
+            .gmap_canvas {
+                overflow:hidden;
+                background:none!important;
+                height:524px;
+                width:589px;}
+        </style>
+    </div></div>
 
 <style>
     h1 {text-align: center;}
@@ -149,6 +168,13 @@ Open Timings
 </style>
 
 <style>
+
+    p {
+        color: black;
+        font-family: font-family:georgia,garamond,serif;
+        font-size:20px;
+        font-style:italic
+    }
     ul {
         list-style-type: none;
         margin: 0;

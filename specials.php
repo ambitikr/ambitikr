@@ -29,16 +29,14 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 <html lang="en">
 <body style="background-color:#C3CED2;">
 <head>
-    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
-        WGC CANTEEN</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">WGC CANTEEN</p>
     <meta charset="utf-8"
     <link rel='stylesheet' type='text/css' href = 'style.css'
 </head>
 
 <body>
 <header>
-    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">
-        SPECIALS</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">SPECIALS</p>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
@@ -55,14 +53,13 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
     </nav>
 
     <div class="bg"></div>
-    <p></p>
-    <p style = "font-family:georgia,garamond,serif;font-size:40px;font-style:italic;color: #C3CED2;">
-        75% off on all mentioned items!</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:40px;font-style:italic;color: black;">
+        All mentioned items are Package deals for only $3.99!</p>
 
     <?php
     echo "<p> Day: " . $this_specials_record['Days'] . "<br>";
     echo "<p> Sweet Item: " . $this_specials_record['SweetName'] . "<br>";
-    echo "<p> Stock: " . $this_specials_record['SavoryName'] . "<br>";
+    echo "<p> Savory Item: " . $this_specials_record['SavoryName'] . "<br>";
     ?>
 
     <h2>Specials Information</h2>

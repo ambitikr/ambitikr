@@ -25,7 +25,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
@@ -84,13 +84,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
         }
     }
     ?>
-<h2>Drink Information</h2>
 
-    <?php
-    echo "<p> Drink Name: " . $this_drink_record['DrinkName'] . "<br>";
-    echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
-    echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
-    ?>
 
 
     <h3>Other Drinks</h3>
@@ -106,6 +100,14 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
         </select>
         <input type='submit' name='drinks_button' value='Show me the drink information'>
     </form>
+
+    <h2>Drink Information</h2>
+
+    <?php
+    echo "<p> Drink Name: " . $this_drink_record['DrinkName'] . "<br>";
+    echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
+    echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
+    ?>
 
 
     <style>

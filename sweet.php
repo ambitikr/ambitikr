@@ -6,8 +6,8 @@ else{
     echo "connected to database";
 }
 
-if(isset($_GET['savory'])){
-    $id = $_GET['savory'];
+if(isset($_GET['sweet'])){
+    $id = $_GET['sweet'];
 }else{
     $id = 1;
 }
@@ -25,7 +25,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 <!DOCTYPE html>
 
 <html lang="en">
-<body style="background-color:#757374;">
+<body style="background-color:#C3CED2;">
 <head>
     <title> COFFEE SHOP</title>
     <meta charset="utf-8"
@@ -38,18 +38,22 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
-            <li> <a href='menu.php'> MENU</a></li>
-            <li> <a href='drinks.php'> DRINKS MENU</a></li>
-            <li> <a href='savoury.php'> SAVOURY ITEMS</a></li>
-            <li> <a href='sweet.php'> SWEET ITEMS</a></li>
+            <li class="dropdown">
+                <a href="menu.php" class="dropbtn">MENU</a>
+                <div class="dropdown-content">
+                    <a href='drinks.php'>DRINKS MENU</a>
+                    <a href='savoury.php'>SAVOURY ITEMS</a>
+                    <a href='sweet.php'>SWEET ITEMS</a>
+                </div>
             <li> <a href='contacts.php'>INFORMATION</a></li>
+            <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
 </header>
 </body>
 <main>
         <div class="bg"></div>
-        <h2>Search a Drink</h2>
+        <h2>Search a Sweet Item</h2>
 
         <form action="" method="post">
             <input type="text" name='search'>
@@ -78,13 +82,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             }
         }
         ?>
-    <h2>Sweet Item Information</h2>
 
-    <?php
-    echo "<p> Item Name: " . $this_sweet_record['SweetName'] . "<br>";
-    echo "<p> Availability: " . $this_sweet_record['Stock'] . "<br>";
-    echo "<p> Cost: " . $this_sweet_record['Cost'] . "<br>";
-    ?>
 
     <h3>Other Sweet Items</h3>
 
@@ -100,6 +98,16 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 
             <input type='submit' name='savory_button' value='Show me the order information'>
     </form>
+
+    <h2>Sweet Item Information</h2>
+
+    <?php
+    echo "<p> Item Name: " . $this_sweet_record['SweetName'] . "<br>";
+    echo "<p> Availability: " . $this_sweet_record['Stock'] . "<br>";
+    echo "<p> Cost: " . $this_sweet_record['Cost'] . "<br>";
+    ?>
+
+
 
     <style>
         h1 {text-align: center;}
