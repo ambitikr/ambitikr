@@ -111,39 +111,9 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
     echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
     ?>
 
-    <h2> Show Certain Things</h2>
-
-    <form action="drinks.php" method="post">
-        <input type='submit' name='testquery1' value="Click Button to Display all Drink Items">
-    </form>
-
-    <?php
-    if(isset($_POST['testquery1']))
-    {
-        $result=mysqli_query($con, "SELECT DrinkName, Available, Cost FROM drinks");
-        if(mysqli_num_rows($result)!=0)
-        {
-            while($test = mysqli_fetch_array($result))
-            {
-                $id = $test['DrinkName'];
-                echo "<table>";
-                echo "<tr>";
-                echo "<tr>". "<p> Drink Name: " . $test['DrinkName'] ."</tr>";
-                /*echo "<tr>". $test['DrinkName']. "</tr>";*/
-                echo "<p> Cost: " . $test['Cost'] . "<br>";
-                /*echo "<tr>". $test['Cost']. "</tr>";*/
-                echo "<p> Availability: " . $test['Available'] . "<br>";
-                /*echo "<tr>". $test['Available'];*/
-                echo "</tr>";
-                echo "</table>";
-            }
-        }
-    }
-    ?>
-
     <main>
-        <form name="sort" action="drinks.php" method="post" align="center">
-            <select name="order">
+        <form name="manage" action="drinks.php" method="post" align="center">
+            <select name="manage">
                 <option value="choose">Sort by</option>
                 <option value="CostDESC">Price high to low</option>
                 <option value="CostASC">price low to high</option>
@@ -153,5 +123,62 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
             <input type="submit" value=" - Sort - " />
         </form>
     </main>
-    
+    <?php
+    if (isset($_POST['manage'])){
+        switch( $_POST['manage'] ){
+            case 'choose':
+                $query = 'SELECT DrinkID, DrinkName, Cost, Available FROM drinks';
+                break;
+            case 'CostDESC':
+                $query = 'SELECT DrinkID, DrinkName, Cost, Available FROM drinks ORDER BY cost DESC';
+                break;
+            case 'CostASC':
+                $query = ' SELECT DrinkID, DrinkName, Cost, Available FROM drinks ORDER BY cost ASC';
+                break;
+            case 'DrinkNameDESC':
+                $query = ' SELECT DrinkID, DrinkName, Cost, Available  FROM drinks ORDER BY DrinkName ASC';
+                break;
+            case 'AvailableASC':
+                $query = ' SELECT DrinkID, DrinkName, Cost, Available FROM drinks ORDER BY Available DESC';
+                break;
+        }
+    }else{
+        $query = "SELECT * FROM drinks";
+    }
+    $results = mysqli_query( $con, $query );
+    ?>
+    </div>
+
+
+<center>
+        <table border="2" class="center">
+        <tr>
+            <td>Drink Name</td>
+            <td>Price($)</td>
+            <td>Availability</td>
+        </tr>
+
+        <?php
+
+        //include "ambitikr_canteen"; // Using database connection file here
+
+        $records = mysqli_query($con, $query); // fetch data from database
+
+        while($data = mysqli_fetch_array($records))
+        {
+            ?>
+            <tr>
+                <td><?php echo $data['DrinkName']; ?></td>
+                <td><?php echo $data['Cost']; ?></td>
+                <td><?php echo $data['Available']; ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+</center>
+
+
+    <?php mysqli_close($con); // Close connection ?>
+
 </main>

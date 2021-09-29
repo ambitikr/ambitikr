@@ -109,36 +109,75 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
     echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
     ?>
 
-
-    <h2> Show Certain Things</h2>
-
-    <form action="savoury.php" method="post">
-        <input type='submit' name='testquery1' value="Click Button to Display all Savory Items">
-    </form>
-
+    <main>
+        <form name="manage" action="savoury.php" method="post" align="center">
+            <select name="manage">
+                <option value="choose">Sort by</option>
+                <option value="CostDESC">Price high to low</option>
+                <option value="CostASC">price low to high</option>
+                <option value="SavoryNameDESC">Savory Item A-Z</option>
+                <option value="StockASC">Available to not available</option>
+            </select>
+            <input type="submit" value=" - Sort - " />
+        </form>
+    </main>
     <?php
-    if(isset($_POST['testquery1']))
-    {
-        $result=mysqli_query($con, "SELECT SavoryName, Stock, Cost FROM savoryitems");
-        if(mysqli_num_rows($result)!=0)
-        {
-            while($test = mysqli_fetch_array($result))
-            {
-                $id = $test['SavoryName'];
-                echo "<table>";
-                echo "<tr>";
-                echo "<tr>". "<p> Savory Item Name: " . $test['SavoryName'] ."</tr>";
-                /*echo "<tr>". $test['DrinkName']. "</tr>";*/
-                echo "<p> Cost: " . $test['Cost'] . "<br>";
-                /*echo "<tr>". $test['Cost']. "</tr>";*/
-                echo "<p> Availability: " . $test['Stock'] . "<br>";
-                /*echo "<tr>". $test['Available'];*/
-                echo "</tr>";
-                echo "</table>";
-            }
+    if (isset($_POST['manage'])){
+        switch( $_POST['manage'] ){
+            case 'choose':
+                $query = 'SELECT SavoryID, SavoryName, Cost, Stock FROM savoryitems ORDER BY Cost DESC';
+                break;
+            case 'CostDESC':
+                $query = 'SELECT SavoryID, SavoryName, Cost, Stock FROM savoryitems ORDER BY Cost DESC';
+                break;
+            case 'CostASC':
+                $query = ' SELECT SavoryID, SavoryName, Cost, Stock FROM savoryitems ORDER BY cost ASC';
+                break;
+            case 'SavoryNameDESC':
+                $query = ' SELECT SavoryID, SavoryName, Cost, Stock  FROM savoryitems ORDER BY SavoryName ASC';
+                break;
+            case 'StockASC':
+                $query = ' SELECT SavoryID, SavoryName, Cost, Stock FROM savoryitems ORDER BY Stock DESC';
+                break;
         }
+    }else{
+        $query = "SELECT * FROM savoryitems";
     }
+    $results = mysqli_query( $con, $query );
     ?>
+    </div>
+
+
+    <center>
+        <table border="2" class="center">
+            <tr>
+                <td>Savory Item Name</td>
+                <td>Price($)</td>
+                <td>Availability</td>
+            </tr>
+
+            <?php
+
+            //include "ambitikr_canteen"; // Using database connection file here
+
+            $records = mysqli_query($con, $query); // fetch data from database
+
+            while($data = mysqli_fetch_array($records))
+            {
+                ?>
+                <tr>
+                    <td><?php echo $data['SavoryName']; ?></td>
+                    <td><?php echo $data['Cost']; ?></td>
+                    <td><?php echo $data['Stock']; ?></td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </center>
+
+
+    <?php mysqli_close($con); // Close connection ?>
 
 </main>
 
