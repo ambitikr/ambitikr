@@ -70,11 +70,14 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
             echo "There was no search results!";
         }else{
             while($row = mysqli_fetch_array($query)) {
-                echo $row ['SavoryName'];
-                echo ": $";
-                echo $row ['Cost'];
-                echo " ---- Availability:";
-                echo $row ['Stock'];
+                echo "<p> Savory Name: " . $row['SavoryName'] . "<br>";
+                /*echo $row ['SavoryName'];*/
+                /*echo ": $";*/
+                echo "<p> Cost: $" . $row['Cost'] . "<br>";
+                /*echo $row ['Cost'];*/
+                echo "<p> Availability: " . $row['Stock'] . "<br>";
+                /*echo " ---- Availability:";*/
+                /*echo $row ['Stock'];*/
                 echo"<br>";
             }
         }
@@ -104,6 +107,37 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
     echo "<p> Item Name: " . $this_savory_record['SavoryName'] . "<br>";
     echo "<p> Availability: " . $this_savory_record['Stock'] . "<br>";
     echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
+    ?>
+
+
+    <h2> Show Certain Things</h2>
+
+    <form action="savoury.php" method="post">
+        <input type='submit' name='testquery1' value="Click Button to Display all Savory Items">
+    </form>
+
+    <?php
+    if(isset($_POST['testquery1']))
+    {
+        $result=mysqli_query($con, "SELECT SavoryName, Stock, Cost FROM savoryitems");
+        if(mysqli_num_rows($result)!=0)
+        {
+            while($test = mysqli_fetch_array($result))
+            {
+                $id = $test['SavoryName'];
+                echo "<table>";
+                echo "<tr>";
+                echo "<tr>". "<p> Savory Item Name: " . $test['SavoryName'] ."</tr>";
+                /*echo "<tr>". $test['DrinkName']. "</tr>";*/
+                echo "<p> Cost: " . $test['Cost'] . "<br>";
+                /*echo "<tr>". $test['Cost']. "</tr>";*/
+                echo "<p> Availability: " . $test['Stock'] . "<br>";
+                /*echo "<tr>". $test['Available'];*/
+                echo "</tr>";
+                echo "</table>";
+            }
+        }
+    }
     ?>
 
 </main>

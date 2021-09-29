@@ -74,19 +74,23 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
             echo "There was no search results!";
         }else{
             while($row = mysqli_fetch_array($query)) {
-                echo $row ['DrinkName'];
-                echo ": $";
-                echo $row ['Cost'];
-                echo " ---- Availability:";
-                echo $row ['Available'];
+                echo "<p> Drink Name: " . $row['DrinkName'] . "<br>";
+                /*echo $row ['DrinkName'];*/
+                /*echo ": $";*/
+                echo "<p> Cost: $" . $row['Cost'] . "<br>";
+                /*echo $row ['Cost'];*/
+                echo "<p> Availablility: " . $row['Available'] . "<br>";
+                /*echo " ---- Availability:";
+                echo $row ['Available'];*/
                 echo"<br>";
             }
         }
     }
     ?>
 
+
     <h3>Other Drinks</h3>
-    <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php'>
+    <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php' align="center">
         <select id = 'drink' name = 'drink'>
             <?php
             while($all_drinks_record = mysqli_fetch_assoc($all_drinks_result)){
@@ -106,5 +110,48 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
     echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
     echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
     ?>
+
+    <h2> Show Certain Things</h2>
+
+    <form action="drinks.php" method="post">
+        <input type='submit' name='testquery1' value="Click Button to Display all Drink Items">
+    </form>
+
+    <?php
+    if(isset($_POST['testquery1']))
+    {
+        $result=mysqli_query($con, "SELECT DrinkName, Available, Cost FROM drinks");
+        if(mysqli_num_rows($result)!=0)
+        {
+            while($test = mysqli_fetch_array($result))
+            {
+                $id = $test['DrinkName'];
+                echo "<table>";
+                echo "<tr>";
+                echo "<tr>". "<p> Drink Name: " . $test['DrinkName'] ."</tr>";
+                /*echo "<tr>". $test['DrinkName']. "</tr>";*/
+                echo "<p> Cost: " . $test['Cost'] . "<br>";
+                /*echo "<tr>". $test['Cost']. "</tr>";*/
+                echo "<p> Availability: " . $test['Available'] . "<br>";
+                /*echo "<tr>". $test['Available'];*/
+                echo "</tr>";
+                echo "</table>";
+            }
+        }
+    }
+    ?>
+
+    <main>
+        <form name="sort" action="drinks.php" method="post" align="center">
+            <select name="order">
+                <option value="choose">Sort by</option>
+                <option value="CostDESC">Price high to low</option>
+                <option value="CostASC">price low to high</option>
+                <option value="DrinkNameDESC">Drink A-Z</option>
+                <option value="AvailableASC">Available to not available</option>
+            </select>
+            <input type="submit" value=" - Sort - " />
+        </form>
+    </main>
     
 </main>
