@@ -26,7 +26,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 
 <html lang="en">
 <head>
-    <title> COFFEE SHOP</title>
+    <title> WGC CANTEEN SW</title>
     <meta charset="utf-8"
     <link rel="stylesheet" href = "css/custom-style.css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
