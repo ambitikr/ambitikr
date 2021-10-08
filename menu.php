@@ -24,7 +24,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 
 <html lang="en">
 <head>
-    <title> COFFEE SHOP</title>
+    <title> WGC CANTEEN MENU</title>
     <meta charset="utf-8"
     <link rel="stylesheet" href = "css/custom-style.css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -37,11 +37,12 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
         <ul>
             <li> <a href='index.php'> HOME</a></li>
             <li class="dropdown">
-                <a href="menu.php" class="dropbtn">MENU</a>
+                <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
                 <div class="dropdown-content">
-                    <a href='drinks.php'>DRINKS MENU</a>
-                    <a href='savoury.php'>SAVOURY ITEMS</a>
-                    <a href='sweet.php'>SWEET ITEMS</a>
+                    <a href="menu.php">ALL MENU</a>
+                    <a href="drinks.php">DRINKS MENU</a>
+                    <a href="savoury.php">SAVORY ITEMS MENU</a>
+                    <a href="sweet.php">SWEET ITEMS MENU</a>
                 </div>
             <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
@@ -52,12 +53,13 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 <main>
     <div class="bg"></div>
     <p></p>
+
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
         MENU
     </p>
     <h3><u>DRINKS</u></h3>
     <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php'>
-        <select id = 'drink' name = 'drink'>
+        <select id = 'drink' name = 'drink' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_drinks_record = mysqli_fetch_assoc($all_drinks_result)){
                 echo "<option value = '". $all_drinks_record['DrinkID'] . "'>";
@@ -66,13 +68,13 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             }
             ?>
         </select>
-        <input type='submit' name='drinks_button' value='Show me the drink information'>
+        <input type='submit' name='drinks_button' value='Show me the drink information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
     <h3><u>SAVORY ITEMS</u></h3>
 
     <form name='savory_form' id='savory_form' method = 'get' action = 'savoury.php'>
-        <select id = 'savory' name = 'savory'>
+        <select id = 'savory' name = 'savory' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_savory_record = mysqli_fetch_assoc($all_savory_result)){
                 echo "<option value = '". $all_savory_record['SavoryID'] . "'>";
@@ -82,13 +84,13 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             ?>
 
         </select>
-        <input type='submit' name='savory_button' value='Show me the Savory Item information'>
+        <input type='submit' name='savory_button' value='Show me the Savory Item information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
     <h3><u>SWEET ITEMS</u></h3>
 
     <form name='sweet_form' id='sweet_form' method = 'get' action = 'sweet.php'>
-        <select id = 'sweet' name = 'sweet'>
+        <select id = 'sweet' name = 'sweet' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_sweet_record = mysqli_fetch_assoc($all_sweet_result)){
                 echo "<option value = '". $all_sweet_record['SweetID'] . "'>";
@@ -97,7 +99,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             }
             ?>
 
-            <input type='submit' name='savory_button' value='Show me the Sweet Item information'>
+            <input type='submit' name='savory_button' value='Show me the Sweet Item information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
     <p></p>
@@ -451,7 +453,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                 <td><div>Item: Water</div>
                     <div>Price: $2.00</div>
                     <div>Stock: Y</div>
-                    <div>Calories: </div>
+                    <div>Calories: 0</div>
                     <div>Ingredients: water.</div>
                     <div><img src="https://ak.picdn.net/shutterstock/videos/20516482/thumb/1.jpg" alt="Picture of Water bottle" width="100" height="100"></div>
                 </td>

@@ -28,6 +28,7 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 
 <html lang="en">
 <head>
+    <title>WEEKLY SPECIALS</title>
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">WGC CANTEEN</p>
     <meta charset="utf-8"
     <link rel="stylesheet" href = "css/custom-style.css"/>
@@ -41,11 +42,12 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
         <ul>
             <li> <a href='index.php'> HOME</a></li>
             <li class="dropdown">
-                <a href="menu.php" class="dropbtn">MENU</a>
+                <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
                 <div class="dropdown-content">
-                    <a href='drinks.php'>DRINKS MENU</a>
-                    <a href='savoury.php'>SAVOURY ITEMS</a>
-                    <a href='sweet.php'>SWEET ITEMS</a>
+                    <a href="menu.php">ALL MENU</a>
+                    <a href="drinks.php">DRINKS MENU</a>
+                    <a href="savoury.php">SAVORY ITEMS MENU</a>
+                    <a href="sweet.php">SWEET ITEMS MENU</a>
                 </div>
             <li> <a href='contacts.php'>INFORMATION</a></li>
             <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
