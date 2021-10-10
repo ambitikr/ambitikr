@@ -6,17 +6,49 @@ else{
     echo "connected to database ";
 }
 
+if(isset($_GET['drink'])){
+    $id = $_GET['drink'];
+}else{
+    $id = 1;
+}
+
 /* Drinks Query*/
 $all_drinks_query = "SELECT DrinkID, DrinkName FROM drinks";
 $all_drinks_result = mysqli_query($con, $all_drinks_query);
 
+/* Drinks Query-  $this_drink_query = "SELECT DrinkN, Available, Cost  FROM drinks WHERE DrinkID = '" .  $id  . "'";*/
+$this_drink_query = "SELECT DrinkName, Available, Cost  FROM drinks WHERE DrinkID = '"   .  $id  . "'";
+$this_drinks_result = mysqli_query($con, $this_drink_query);
+$this_drink_record = mysqli_fetch_assoc($this_drinks_result);
+
+
+if(isset($_GET['savory'])){
+    $id = $_GET['savory'];
+}else{
+    $id = 1;
+}
 /* Savory Items Query*/
 $all_savory_query = "SELECT SavoryID, SavoryName FROM savoryitems";
 $all_savory_result = mysqli_query($con, $all_savory_query);
 
+/* From Savory page*/
+$this_savory_query = "SELECT SavoryName, Stock, Cost  FROM savoryitems WHERE SavoryID = '"   .  $id  . "'";
+$this_savory_result = mysqli_query($con, $this_savory_query);
+$this_savory_record = mysqli_fetch_assoc($this_savory_result);
+
+if(isset($_GET['sweet'])){
+    $id = $_GET['sweet'];
+}else{
+    $id = 1;
+}
 /* Sweet Items Query*/
 $all_sweet_query = "SELECT SweetID, SweetName FROM sweets";
 $all_sweet_result = mysqli_query($con, $all_sweet_query);
+
+/* Sweets Query*/
+$this_sweet_query = "SELECT SweetName, Stock, Cost  FROM sweets WHERE SweetID  = '"   .  $id  . "'";
+$this_sweet_result = mysqli_query($con, $this_sweet_query);
+$this_sweet_record = mysqli_fetch_assoc($this_sweet_result);
 
 ?>
 
@@ -32,14 +64,14 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
 
 <body>
 <header>
-    <h1> WELLINGTON GIRLS COLLEGE CANTEEN</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">WGC CANTEEN</p>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
             <li class="dropdown">
                 <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
                 <div class="dropdown-content">
-                    <a href="menu.php">ALL MENU</a>
+                    <a href="menu.php">ALL MENU Inc VEGAN & GLU FREE OPTIONS</a>
                     <a href="drinks.php">DRINKS MENU</a>
                     <a href="savoury.php">SAVORY ITEMS MENU</a>
                     <a href="sweet.php">SWEET ITEMS MENU</a>
@@ -54,11 +86,24 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
     <div class="bg"></div>
     <p></p>
 
+
+
+    <!-- The navigation menu -->
+    <div class="navbar">
+        <a class="active" href="menu.php">All Menu Inc Vegan & Gluten Free</a>
+        <a href="drinks.php">Drinks Menu</a>
+        <a href="savoury.php">Savory Menu</a>
+        <a href="sweet.php">Sweet Menu</a>
+
+    </div>
+
+
+
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
         MENU
     </p>
     <h3><u>DRINKS</u></h3>
-    <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php'>
+    <form name='drinks_form' id='drinks_form' method = 'get' action = 'menu.php'>
         <select id = 'drink' name = 'drink' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_drinks_record = mysqli_fetch_assoc($all_drinks_result)){
@@ -71,9 +116,15 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
         <input type='submit' name='drinks_button' value='Show me the drink information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
+    <?php
+    echo "<p> Drink Name: " . $this_drink_record['DrinkName'] . "<br>";
+    echo "<p> Availability: " . $this_drink_record['Available'] . "<br>";
+    echo "<p> Cost: " . $this_drink_record['Cost'] . "<br>";
+    ?>
+
     <h3><u>SAVORY ITEMS</u></h3>
 
-    <form name='savory_form' id='savory_form' method = 'get' action = 'savoury.php'>
+    <form name='savory_form' id='savory_form' method = 'get' action = 'menu.php'>
         <select id = 'savory' name = 'savory' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_savory_record = mysqli_fetch_assoc($all_savory_result)){
@@ -87,9 +138,16 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
         <input type='submit' name='savory_button' value='Show me the Savory Item information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
+    <?php
+    echo "<p> Item Name: " . $this_savory_record['SavoryName'] . "<br>";
+    echo "<p> Availability: " . $this_savory_record['Stock'] . "<br>";
+    echo "<p> Cost: " . $this_savory_record['Cost'] . "<br>";
+    ?>
+
+
     <h3><u>SWEET ITEMS</u></h3>
 
-    <form name='sweet_form' id='sweet_form' method = 'get' action = 'sweet.php'>
+    <form name='sweet_form' id='sweet_form' method = 'get' action = 'menu.php'>
         <select id = 'sweet' name = 'sweet' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
             while($all_sweet_record = mysqli_fetch_assoc($all_sweet_result)){
@@ -102,12 +160,18 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
             <input type='submit' name='savory_button' value='Show me the Sweet Item information' style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
 
+    <?php
+    echo "<p> Item Name: " . $this_sweet_record['SweetName'] . "<br>";
+    echo "<p> Availability: " . $this_sweet_record['Stock'] . "<br>";
+    echo "<p> Cost: " . $this_sweet_record['Cost'] . "<br>";
+    ?>
+
     <p></p>
-    <p style = "font-family:georgia,garamond,serif;font-size:25px;">
-        Menu
+    <p style = "font-family:georgia,garamond,serif;font-size:28px;">
+        All Our Items
     </p>
     <center>
-        <table style="width:50%">
+        <table style="width:75%" border="2" class="center">
             <tr>
                 <th>Vegan Options</th>
                 <th>Gluten Free Options</th>

@@ -32,14 +32,14 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 
 <body>
 <header>
-    <h1> WELLINGTON GIRLS COLLEGE CANTEEN</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">WGC CANTEEN</p>
     <nav>
         <ul>
             <li> <a href='index.php'> HOME</a></li>
             <li class="dropdown">
                 <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
                 <div class="dropdown-content">
-                    <a href="menu.php">ALL MENU</a>
+                    <a href="menu.php">ALL MENU Inc VEGAN & GLU FREE OPTIONS</a>
                     <a href="drinks.php">DRINKS MENU</a>
                     <a href="savoury.php">SAVORY ITEMS MENU</a>
                     <a href="sweet.php">SWEET ITEMS MENU</a>
@@ -52,13 +52,22 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
 </body>
 <main>
     <div class="bg"></div>
+
+    <!-- The navigation menu -->
+    <div class="navbar">
+        <a href="menu.php">All Menu Inc Vegan & Gluten Free</a>
+        <a href="drinks.php">Drinks Menu</a>
+        <a class="active" href="savoury.php">Savory Menu</a>
+        <a href="sweet.php">Sweet Menu</a>
+    </div>
+    <br>
     <h2>Search a Savoury Item</h2>
 
     <form action="" method="post">
         <input type="text" name='search' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
         <input type="submit" name="submit" value="Search" style = "background-color:#bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
     </form>
-
+    <center>
     <?php
     if(isset($_POST['search'])) {
         $search = $_POST['search'];
@@ -84,6 +93,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
         }
     }
     ?>
+    </center>
 
 
     <h2>Other Savory Items</h2>
@@ -176,7 +186,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
             ?>
         </table>
 
-    <h2>Information</h2>
+    <h2>Here is our Savory Items Menu</h2>
 
     <table border="2">
         <tr>

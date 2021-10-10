@@ -13,7 +13,7 @@ else{
 <head>
     <title>INFORMATION</title>
     <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">
-        WELLINGTON GIRLS COLLEGE CANTEEN</p>
+        WGC CANTEEN</p>
     <meta charset="utf-8"
     <link rel="stylesheet" href = "css/custom-style.css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@ else{
             <li class="dropdown">
                 <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
                 <div class="dropdown-content">
-                    <a href="menu.php">ALL MENU</a>
+                    <a href="menu.php">ALL MENU Inc VEGAN & GLU FREE OPTIONS</a>
                     <a href="drinks.php">DRINKS MENU</a>
                     <a href="savoury.php">SAVORY ITEMS MENU</a>
                     <a href="sweet.php">SWEET ITEMS MENU</a>

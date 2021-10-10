@@ -34,28 +34,35 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
 
 <body>
 <header>
-    <h1> WELLINGTON GIRLS COLLEGE CANTEEN</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">WGC CANTEEN</p>
     <nav>
         <ul>
-            <ul>
-                <li> <a href='index.php'> HOME</a></li>
-                <li class="dropdown">
-                    <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
-                    <div class="dropdown-content">
-                        <a href="menu.php">ALL MENU</a>
-                        <a href="drinks.php">DRINKS MENU</a>
-                        <a href="savoury.php">SAVORY ITEMS MENU</a>
-                        <a href="sweet.php">SWEET ITEMS MENU</a>
-                    </div>
-                <li> <a href='contacts.php'>INFORMATION</a></li>
-                <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
-            </ul>
+            <li> <a href='index.php'> HOME</a></li>
+            <li class="dropdown">
+                <button class="dropbtn" style = "background-color: #333;font-family:georgia,garamond,serif;font-size:15px; "> MENU ⮟</button>
+                <div class="dropdown-content">
+                    <a href="menu.php">ALL MENU Inc VEGAN & GLU FREE OPTIONS</a>
+                    <a href="drinks.php">DRINKS MENU</a>
+                    <a href="savoury.php">SAVORY ITEMS MENU</a>
+                    <a href="sweet.php">SWEET ITEMS MENU</a>
+                </div>
+            <li> <a href='contacts.php'>INFORMATION</a></li>
+            <li> <a href='specials.php'> WEEKLY SPECIALS</a></li>
         </ul>
     </nav>
 </header>
 </body>
 <main>
     <div class="bg"></div>
+
+    <!-- The navigation menu -->
+    <div class="navbar">
+        <a href="menu.php">All Menu Inc Vegan & Gluten Free</a>
+        <a class="active" href="drinks.php">Drinks Menu</a>
+        <a href="savoury.php">Savory Menu</a>
+        <a href="sweet.php">Sweet Menu</a>
+    </div>
+    <br>
 <h2>Search a Drink</h2>
 
     <form action="" method="post">
@@ -116,14 +123,14 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
 
     <main>
         <form name="manage" action="drinks.php" method="post" align="center">
-            <select name="manage" style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif;">
-                <option value="choose" class="sizing">Sort by</option>
-                <option value="CostDESC" class="sizing">Price high to low</option>
-                <option value="CostASC" class="sizing">price low to high</option>
-                <option value="DrinkNameDESC" class="sizing">Drink A-Z</option>
-                <option value="AvailableASC" class="sizing">Available to not available</option>
+            <select name="manage" style = "font-size:15px; font-family:georgia,garamond,serif;">
+                <option value="choose" >Sort by</option>
+                <option value="CostDESC" >Price high to low</option>
+                <option value="CostASC" >price low to high</option>
+                <option value="DrinkNameDESC" >Drink A-Z</option>
+                <option value="AvailableASC" >Available to not available</option>
             </select>
-            <input style = "background-color: #bbbbbb; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; text-decoration-color:white;" type="submit" value=" * Sort * " />
+            <input style = "background-color: #bbbbbb; font-size:15px; font-family:georgia,garamond,serif; text-decoration-color:white;" type="submit" value=" * Sort * " />
         </form>
     </main>
     <?php
@@ -180,7 +187,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
         ?>
     </table>
 
-    <h2>Images Information</h2>
+    <h2>Drinks Menu</h2>
 
     <table border="2">
         <tr>
