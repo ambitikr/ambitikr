@@ -89,9 +89,9 @@ else{
 </table>
 </center>
 <h3>Contacts</h3>
+<div>
 <p style = "font-family:georgia,garamond,serif;font-size:17px;font-style:italic;">Email: wgccanteen@wgc.school.nz</p>
 <p style = "font-family:georgia,garamond,serif;font-size:17px;font-style:italic;">Phone Number: 0123456789 9999</p>
-
 
 <!-- Add font awesome icons -->
 <center>
@@ -103,18 +103,14 @@ else{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<h2 style = "text-align: left; font-family:georgia,garamond;">Address: </h2>
-<div class="mapouter">
-    <div class="gmap_canvas">
-        <iframe width="589" height="524" id="gmap_canvas" src="https://maps.google.com/maps?q=Pipitea%20Street,%20Thorndon,%20Wellington%206011&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="5"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0">
+<!---maps--->
+<h3>Address</h3>
+<p style="text-align: center;">
+    <iframe src="https://maps.google.com/maps?q=Pipitea%20Street,%20Thorndon,%20Wellington%206011&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="589"
+            height="524"
+            frameborder="0">
 
-        </iframe><a href="https://putlocker-is.org"></a>
-        <br>
-        <a href="https://www.embedgooglemap.net"></a>
-    </div></div>
-
+    </iframe></p>
+</div>
 </body>

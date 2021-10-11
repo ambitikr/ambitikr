@@ -121,7 +121,7 @@ li:last-child {
 /* Contacts1- map*/
  .mapouter {
      position:relative;
-     text-align:right;
+     text-align:center;
      height:524px;
      width:589px;
  }

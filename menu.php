@@ -186,7 +186,7 @@ $this_sweet_record = mysqli_fetch_assoc($this_sweet_result);
                     <div>Stock:</div>
                     <div>Calories: 580</div>
                     <div>Ingredients: grade pasta flour, semolina four, olive oil, water, salt</div>
-                    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzuwGvzTZKUTz1fvo7BJjOyuX3FcaCdLtzQ&usqp=CAU" alt="Vegan Pasta" width="100" height="100"></div>
+                    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfTEuA--qGuFjiq5uzzQtH4SrKx8vPuBIr0A&usqp=CAU" alt="Vegan Pasta" width="100" height="100"></div>
                 </td>
                 <td>
                     <div>Item: Oreo Chocolate Sandwich Cookies</div>
@@ -312,7 +312,7 @@ $this_sweet_record = mysqli_fetch_assoc($this_sweet_result);
                     <div>Stock: Y</div>
                     <div>Calories: 87</div>
                     <div>Ingredients: Green Peas (64%), Vegetable Oil [with Antioxidant], Rice, Seasoning [salt, vinegar Powder, Sugar, Flavour Enhancers (621, 627, 631), Maltodextrin, Food Acids (262, 330), Mineral Salt (341), Vegetable Oil], Stabiliser </div>
-                    <div><img src="https://world.openfoodfacts.org/images/products/935/158/500/0109/front_en.3.full.jpg" alt="Picture of Harvest Snaps Salt&Vinegar" width="100" height="100"></div>
+                    <div><img src="harvest_snaps_chilli.JPG" alt="Picture of Harvest Snaps Salt&Vinegar" width="100" height="100"></div>
                 </td>
                 <td><div>Item: Long Black</div>
                     <div>Price: $4.00</div>
@@ -385,7 +385,7 @@ $this_sweet_record = mysqli_fetch_assoc($this_sweet_result);
                     <div>Stock: Y</div>
                     <div>Calories:</div>
                     <div>Ingredients: Fruit Juices & Purees, Sugar, Corn Syrup, Tapioca Starch, Acidity Regulators, Apple or Citrus Fibre, Natural Flavourings, Gelling Agent, Antioxidant, Natural Colours</div>
-                    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIq6YZ3PZLJzF5k5xHovhWGskuSkNzgZehug&usqp=CAU" alt="Picture of Fruit Nuggets" width="100" height="100"></div>
+                    <div><img src="fruit_nuggets.JPG" alt="Picture of Fruit Nuggets" width="100" height="100"></div>
                 </td>
                 <td><div>Item: Harvest Snaps Chilli</div>
                     <div>Price: $4.00</div>

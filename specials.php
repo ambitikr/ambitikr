@@ -83,9 +83,6 @@ $all_specials_result = mysqli_query($con, $all_specials_query);
 
 </header>
 
-
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1" >
 
 </head>
