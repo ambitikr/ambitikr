@@ -97,7 +97,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
     ?>
     </center>
 
-    <h2>Other Drinks</h2>
+    <h2>Drinks</h2>
     <form name='drinks_form' id='drinks_form' method = 'get' action = 'drinks.php' align="center">
         <select id = 'drink' name = 'drink' style = "background-color: white; font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
             <?php
@@ -202,7 +202,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: Milk, chocolate syrup or chocolate powder, sweetener (such as sugar, corn syrup, high-fructose corn syrup)</div><br>
                 <div><strong>Calories:</strong> 83</div>
             </td>
-            <td><img src="https://live.staticflickr.com/4686/38262256334_98b90c7e68_b.jpg" alt="Chocolate Milk" width="200" height="200" class="center"></td><br>
+            <td><img src="chocolate_milk.JPG" alt="Chocolate Milk" width="200" height="200" class="center"></td><br>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -212,7 +212,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: coca leaves, and kola nuts (a source of caffeine)</div><br>
                 <div><strong>Calories:</strong> 140</div>
             </td>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/15-09-26-RalfR-WLC-0098.jpg/255px-15-09-26-RalfR-WLC-0098.jpg" alt="Picture" width="120" height="200" class="center"</td>
+            <td><img src="coke.JPG" alt="Picture" width="200" height="160" class="center"</td>
             <td>$3.00</td>
             <td>N</td>
         </tr>
@@ -222,7 +222,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: Carbonated Water, Sugar, Orange Juice from Concentrate, Citrus Fruit from Concentrate, Citric Acid, Vegetable Extracts, Sweeteners, Preservative, Malic Acid, Acidity Regulator, Stabiliser, Natural Orange</div><br>
                 <div><strong>Calories:</strong> 63</div>
             </td>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fanta_raspberry_330ml_can-front_PNr%C2%B00853.jpg/330px-Fanta_raspberry_330ml_can-front_PNr%C2%B00853.jpg" alt="Picture of Can of Fanta" width="100" height="180" class="center"></td>
+            <td><img src="fanta.JPG" alt="Picture of Can of Fanta" width="200" height="180" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -232,7 +232,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: ground espresso, milk</div><br>
                 <div><strong>Calories:</strong> 120</div>
             </td>
-            <td><img src="https://live.staticflickr.com/2943/15344423582_f5ba6b14df_b.jpg" alt="Picture of Flat white"  width="200" height="180" class="center"></td>
+            <td><img src="flat_white.JPG" alt="Picture of Flat white"  width="190" height="180" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -242,7 +242,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: ratio of 3/4 water and 1/4 espresso, or 4/5 water 1/5th espresso</div><br>
                 <div><strong>Calories:</strong> </div>
             </td>
-            <td><img src="https://cdn0.woolworths.media/content/wowproductimages/large/066122.jpg" alt="Picture of Iced long black can" width="160" height="180" class="center"></td>
+            <td><img src="long_black.JPG" alt="Picture of Iced long black can" width="160" height="180" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -252,7 +252,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: Carbonated Water Sugar, Food Acid, Flavour, Mineral Salts, Colour</div><br>
                 <div><strong>Calories:</strong> 196</div>
             </td>
-            <td><img src="https://live.staticflickr.com/4586/27200301779_827e93106b_b.jpg" alt="Picture of L&P Drink" width="180" height="160" class="center"></td>
+            <td><img src="l&p.JPG" alt="Picture of L&P Drink" width="180" height="160" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -262,7 +262,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: On Average 9-10 Squeezed Oranges</div><br>
                 <div><strong>Calories:</strong> 45</div>
             </td>
-            <td><img src="https://world.openfoodfacts.org/images/products/942/190/308/4019/front_fr.4.full.jpg" alt="Picture of Orange Juice" width="145" height="180" class="center"></td>
+            <td><img src="orange_juice.JPG" alt="Picture of Orange Juice" width="145" height="180" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -273,7 +273,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients:  Carbonated Water, Sugar, Citric Acid, Sweeteners, Acidity Regulator, Natural Lemon and Lime Flavourings</div><br>
                 <div><strong>Calories:</strong> 39 per 100g</div>
             </td>
-            <td><img src="https://world.openfoodfacts.org/images/products/544/900/000/0729/front_fr.9.full.jpg" alt="Picture of Sprite Drink" width="200" height="180" class="center"></td>
+            <td><img src="sprite.JPG" alt="Picture of Sprite Drink" width="200" height="180" class="center"></td>
             <td>$3.00</td>
             <td>N</td>
         </tr>
@@ -283,7 +283,7 @@ $all_drinks_result = mysqli_query($con, $all_drinks_query);
                 <div>Ingredients: water.</div><br>
                 <div><strong>Calories: 0</strong> </div>
             </td>
-            <td><img src="https://ak.picdn.net/shutterstock/videos/20516482/thumb/1.jpg" alt="Picture of Water bottle" width="195" height="130" class="center"></td>
+            <td><img src="water.JPG" alt="Picture of Water bottle" width="195" height="130" class="center"></td>
             <td>$2.00</td>
             <td>Y</td>
         </tr>

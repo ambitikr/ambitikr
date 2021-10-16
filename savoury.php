@@ -96,7 +96,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
     </center>
 
 
-    <h2>Other Savory Items</h2>
+    <h2>Savory Items</h2>
 
     <form name='savory_form' id='savory_form' method = 'get' action = 'savoury.php'>
         <select id = 'savory' name = 'savory' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
@@ -201,7 +201,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Wheat Flour, Vegetable Oil (Antioxidant (304)), Sugar, Fructose Syrup, Salt, Raising Agents (500, 341, 503), Emulsifier (Soy Lecithin)</div><br>
                 <div><strong>Calories:</strong> 80</div>
             </td>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2020-07-19_12_17_29_A_sample_of_Nabisco_Mini_Ritz_crackers_in_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg/300px-2020-07-19_12_17_29_A_sample_of_Nabisco_Mini_Ritz_crackers_in_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg" alt="Picture of Ritz Crackers"  width="150" height="150" class="center"></td><br>
+            <td><img src="ritz_crackers.JPG" alt="Picture of Ritz Crackers"  width="180" height="150" class="center"></td><br>
             <td>$2.50</td>
             <td>Y</td>
         </tr>
@@ -211,7 +211,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Potato, Oil, Salt & Pepper if preferred</div><br>
                 <div><strong>Calories:</strong> 312</div>
             </td>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Fries_2.jpg" alt="Picture of Potato Fries"  width="140" height="100" class="center"</td>
+            <td><img src="fries.JPG" alt="Picture of Potato Fries"  width="140" height="120" class="center"</td>
             <td>$7.00</td>
             <td>Y</td>
         </tr>
@@ -221,7 +221,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Wheat Flour, Wholemeal Flour(Contains Wheat), Tapioca Starch, Water, Mineral Salts, Vegetable Oil, Salt, Stabilisers, Vegetable Gum</div><br>
                 <div><strong>Calories:</strong> 299</div>
             </td>
-            <td><img src="https://p2.piqsels.com/preview/263/414/444/food-ramen-noodles-cooking-thumbnail.jpg" alt="Picture of 2 minute noodles" width="135" height="120" class="center"></td>
+            <td><img src="noodles.JPG" alt="Picture of 2 minute noodles" width="145" height="130" class="center"></td>
             <td>$3.00</td>
             <td>Y</td>
         </tr>
@@ -231,7 +231,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Popcorn, coconut oil, sea salt</div><br>
                 <div><strong>Calories:</strong> 99</div>
             </td>
-            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbwqFEcjlzdCl5mcTB1A2KECleaFLisImbEw&usqp=CAU" alt="Picture of popcorn"  width="200" height="180" class="center"></td>
+            <td><img src="serious_popcorn.JPG" alt="Picture of popcorn"  width="170" height="150" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -241,7 +241,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients:  white bread or brown, capsicum, mayo, onion, tomato, cucumber, carrot, cabbage</div><br>
                 <div><strong>Calories:</strong> 139</div>
             </td>
-            <td><img src="https://p1.pxfuel.com/preview/311/545/138/salad-sandwiches-lunch-bread.jpg" alt="Picture of Vegetarian Sandwich" width="100" height="150" class="center"></td>
+            <td><img src="veg_sandwich.JPG" alt="Picture of Vegetarian Sandwich" width="150" height="150" class="center"></td>
             <td>$4.00</td>
             <td>Y</td>
         </tr>
@@ -251,7 +251,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Potatoes, sunflower oil, sea salt</div><br>
                 <div><strong>Calories:</strong> 160</div>
             </td>
-            <td><img src="https://world.openfoodfacts.org/images/products/941/488/245/1149/front_fr.3.full.jpg" alt="Picture of Sea Salt Chips" width="100" height="180" class="center"></td>
+            <td><img src="proper_ss.JPG" alt="Picture of Sea Salt Chips" width="170" height="170" class="center"></td>
             <td>$2.00</td>
             <td>Y</td>
         </tr>
@@ -261,7 +261,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Potatoes, sunflower oil, sea salt, vinegar</div><br>
                 <div><strong>Calories:</strong> 160</div>
             </td>
-            <td><img src="https://world.openfoodfacts.org/images/products/931/098/801/6063/front_en.8.full.jpg" alt="Picture of Copper Kettle Vinegar Chips" width="110" height="130" class="center"></td>
+            <td><img src="kettle_sv.JPG" alt="Picture of Copper Kettle Vinegar Chips" width="130" height="150" class="center"></td>
             <td>$2.00</td>
             <td>Y</td>
         </tr>
@@ -272,7 +272,7 @@ $all_savory_result = mysqli_query($con, $all_savory_query);
                 <div>Ingredients: Potatoes, sunflower oil, sea salt </div><br>
                 <div><strong>Calories:</strong> 160</div>
             </td>
-            <td><img src="https://au.openfoodfacts.org/images/products/08275727/front_en.8.full.jpg" alt="Picture of Copper Kettle Salt Chip Packet" width="200" height="180" class="center"></td>
+            <td><img src="kettle_ss.JPG" alt="Picture of Copper Kettle Salt Chip Packet" width="180" height="160" class="center"></td>
             <td>$2.00</td>
             <td>N</td>
         </tr>

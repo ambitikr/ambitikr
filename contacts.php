@@ -95,9 +95,9 @@ else{
 
 <!-- Add font awesome icons -->
 <center>
-<a href="https://www.facebook.com/WellingtonGirlsCollegeNZ/" class="fa fa-facebook"></a>
-<a href="https://wgc.school.nz/" class="fa fa-google"></a>
-<a href="https://www.instagram.com/wgcteamteal/?hl=en" class="fa fa-instagram"></a>
+<a href="https://www.facebook.com/WellingtonGirlsCollegeNZ/" class="fa fa-facebook" style="background: #3B5998;">.</a>
+<a href="https://wgc.school.nz/" class="fa fa-google" style="background: #333333;">.</a>
+<a href="https://www.instagram.com/wgcteamteal/?hl=en" class="fa fa-instagram" style="background: #000000">.</a>
 </center>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

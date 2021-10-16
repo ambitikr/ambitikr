@@ -96,7 +96,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
         }
         ?>
     </center>
-    <h2>Other Sweet Items</h2>
+    <h2>Sweet Items</h2>
 
     <form name='sweet_form' id='sweet_form' method = 'get' action = 'sweet.php'>
         <select id = 'sweet' name = 'sweet' style = "font-size:15px; /*font-style:italic;*/ font-family:georgia,garamond,serif; ">
@@ -200,7 +200,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: Blueberries, flour, sugar, oil, milk, egg, baking powder, Salt and vanilla extract</div><br>
                     <div><strong>Calories:</strong> 297</div>
                 </td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Blueberry_muffin%2C_wrapped.jpg" alt="Picture of Blueberry Cupcakes"  width="150" height="150" class="center"></td><br>
+                <td><img src="blueberry_muf.JPG" alt="Picture of Blueberry Cupcakes"  width="170" height="170" class="center"></td><br>
                 <td>$6.00</td>
                 <td>N</td>
             </tr>
@@ -210,7 +210,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: Sugar, wheat flour, milk solids, butter (cream, water, salt), pecans (5%), margarine (soy), water, golden syrup, cocoa, coconut, glucose, salt, raising agents (450, 500), preservative 202</div><br>
                     <div><strong>Calories:</strong> 382</div>
                 </td>
-                <td><img src="https://live.staticflickr.com/4033/4390905480_14d4a50528_b.jpg" alt="Picture of Caramel Slices"  width="160" height="120" class="center"</td>
+                <td><img src="caramel_slice.JPG" alt="Picture of Caramel Slices"  width="180" height="140" class="center"</td>
                 <td>$4.00</td>
                 <td>Y</td>
             </tr>
@@ -220,7 +220,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: Sugar, Milk, butter</div><br>
                     <div><strong>Calories:</strong> 411</div>
                 </td>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyer-c-K1FcYpz0tOReAwNJFalBVfPXyXFTQ&usqp=CAU" alt="Picture of Fudge" width="135" height="120" class="center"></td>
+                <td><img src="fudge.JPG" alt="Picture of Fudge" width="155" height="150" class="center"></td>
                 <td>$5.00</td>
                 <td>Y</td>
             </tr>
@@ -230,7 +230,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients:  Dairy ingredients, cane sugar, cocoa components, almond, vegetable oil, glucose, emulsifiers, stabilisers, flavours, colour</div><br>
                     <div><strong>Calories:</strong> 272</div>
                 </td>
-                <td><img src="https://world.openfoodfacts.org/images/products/885/193/229/5789/front_en.30.full.jpg" alt="Picture of Magnum Almond 5 pack ice cream"  width="180" height="100" class="center"></td>
+                <td><img src="magnum.JPG" alt="Picture of Magnum Almond 5 pack ice cream"  width="180" height="100" class="center"></td>
                 <td>$7.00</td>
                 <td>Y</td>
             </tr>
@@ -240,7 +240,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: self-raising flour, plain flour, wheaten cornflour, eggs, at room temperature, Chelsea Raw Caster Sugar, boiling water, butter, shredded coconut (for rolling pieces in)</div><br>
                     <div><strong>Calories:</strong> 187</div>
                 </td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mocha_Flake_amingtons.jpg/375px-Mocha_Flake_amingtons.jpg" alt="Picture of Lamingtons" width="130" height="130" class="center"></td>
+                <td><img src="lamingtons.JPG" alt="Picture of Lamingtons" width="160" height="160" class="center"></td>
                 <td>$3.00</td>
                 <td>N</td>
             </tr>
@@ -250,7 +250,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: Wheat Flour, Sugar, Vegetable Oil (contains Antioxidant (319)), Cocoa Powder, Fructose Syrup, Cornstarch, Raising Agents (500, 503), Salt, Emulsifier (Soy Lecithin), Flavour.</div><br>
                     <div><strong>Calories:</strong> 160</div>
                 </td>
-                <td><img src="https://www.godairyfree.org/wp-content/uploads/2020/11/news-gluten-free-oreos.jpg" alt="Picture of Oreo cookies" width="120" height="130" class="center"></td>
+                <td><img src="oreos.JPG" alt="Picture of Oreo cookies" width="150" height="160" class="center"></td>
                 <td>$5.00</td>
                 <td>Y</td>
             </tr>
@@ -260,7 +260,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: ground almonds, desiccated coconut, gluten free plain flour, Chelsea Caster Sugar, (125g) unsalted butter, melted, egg yolks, cold water, cup raspberry jam, frozen raspberries, Chelsea Icing Sugar</div><br>
                     <div><strong>Calories:</strong> 430</div>
                 </td>
-                <td><img src="https://p1.pxfuel.com/preview/410/318/538/food-drink-food-fruit.jpg" alt="Picture of Raspberry Slice" width="150" height="130" class="center"></td>
+                <td><img src="rasp_slice.JPG" alt="Picture of Raspberry Slice" width="155" height="135" class="center"></td>
                 <td>$3.00</td>
                 <td>Y</td>
             </tr>
@@ -270,7 +270,7 @@ $all_sweet_result = mysqli_query($con, $all_sweet_query);
                     <div>Ingredients: white sugar, sweet milk chocolate, corn syrup, peanuts, milk condensed with sugar, coconut oil, malted milk, whites of eggs and salt</div><br>
                     <div><strong>Calories:</strong> 57grams</div>
                 </td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Snickers_wrapped.png/360px-Snickers_wrapped.png" alt="Picture of Snickers bar" width="180" height="80" class="center"></td>
+                <td><img src="snickers.JPG" alt="Picture of Snickers bar" width="150" height="150" class="center"></td>
                 <td>$2.00</td>
                 <td>Y</td>
             </tr>
